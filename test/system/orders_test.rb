@@ -46,8 +46,9 @@ class OrdersTest < ApplicationSystemTestCase
 
     assert_text "Order was successfully destroyed"
   end
-
-  test 'check routing number' do
+end
+class PayTypeTests < ApplicationSystemTestCase
+  setup do
     visit store_index_url
 
     click_on 'Add to Cart', match: :first
@@ -57,11 +58,33 @@ class OrdersTest < ApplicationSystemTestCase
     fill_in 'order_name', with: 'Dave Thomas'
     fill_in 'order_address', with: '123 Main Street'
     fill_in 'order_email', with: 'dave@example.com'
+  end
 
+  test 'check routing and account number' do
     assert_no_selector '#order_routing_number'
+    assert_no_selector '#order_account_number'
 
     select 'Check', from: 'Pay type'
 
     assert_selector '#order_routing_number'
+    assert_selector '#order_account_number'
+  end
+
+  test 'check credit card number and expiration date' do
+    assert_no_selector '#order_credit_card_number'
+    assert_no_selector '#order_expiration_date'
+
+    select 'Credit Card', from: 'Pay type'
+
+    assert_selector '#order_credit_card_number'
+    assert_selector '#order_expiration_date'
+  end
+
+  test 'check purchase order' do
+    assert_no_selector '#order_po_number'
+
+    select 'Purchase Order', from: 'Pay type'
+
+    assert_selector '#order_po_number'
   end
 end
