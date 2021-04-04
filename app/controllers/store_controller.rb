@@ -3,6 +3,7 @@ class StoreController < ApplicationController
   include Counter
 
   before_action :set_cart, :set_counter
+  skip_before_action :authorize
 
   def index
     @products = Product.order(:title)
