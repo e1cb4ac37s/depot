@@ -11,12 +11,12 @@ const PayTypeSelector = () => {
   return (
     <>
       <div className="field">
-        <label htmlFor="order_pay_type">Pay type</label>
+        <label htmlFor="order_pay_type">{I18n.t('orders.form.pay_type')}</label>
         <select name="order[pay_type]" id="order_pay_type" onChange={onPayTypeSelected}>
-          <option value="">Select a payment method</option>
-          <option value="Check">Check</option>
-          <option value="Credit Card">Credit Card</option>
-          <option value="Purchase Order">Purchase Order</option>
+          <option value="">{I18n.t('orders.form.pay_prompt_html')}</option>
+          <option value="Check">{I18n.t('orders.form.pay_types.check')}</option>
+          <option value="Credit Card">{I18n.t('orders.form.pay_types.credit_card')}</option>
+          <option value="Purchase Order">{I18n.t('orders.form.pay_types.purchase_order')}</option>
         </select>
       </div>
       <PayTypeCustomComponent selectedPayType={selectedPayType} />

@@ -16,7 +16,7 @@ const PayTypeCustomComponent = ({selectedPayType}) => {
 const CheckPayType = () => (
   <>
     <div className="field">
-      <label htmlFor="order_routing_number">Routing #</label>
+      <label htmlFor="order_routing_number">{I18n.t('orders.form.check_pay_type.routing_number')}</label>
       <input
         type="password"
         name="order[routing_number]"
@@ -24,7 +24,7 @@ const CheckPayType = () => (
       />
     </div>
     <div className="field">
-      <label htmlFor="order_account_number">Account #</label>
+      <label htmlFor="order_account_number">{I18n.t('orders.form.check_pay_type.account_number')}</label>
       <input
         type="text"
         name="order[account_number]"
@@ -37,7 +37,7 @@ const CheckPayType = () => (
 const CreditCardPayType = () => (
   <>
     <div className="field">
-      <label htmlFor="order_credit_card_number">CC #</label>
+      <label htmlFor="order_credit_card_number">{I18n.t('orders.form.credit_card_pay_type.cc_number')}</label>
       <input
         type="password"
         name="order[credit_card_number]"
@@ -45,7 +45,7 @@ const CreditCardPayType = () => (
       />
     </div>
     <div className="field">
-      <label htmlFor="order_expiration_date">Expiry</label>
+      <label htmlFor="order_expiration_date">{I18n.t('orders.form.credit_card_pay_type.expiration_date')}</label>
       <input
         type="text"
         name="order[expiration_date]"
@@ -59,7 +59,7 @@ const CreditCardPayType = () => (
 
 const PurchaseOrderPayType = () => (
   <div className="field">
-    <label htmlFor="order_po_number">PO #</label>
+    <label htmlFor="order_po_number">{I18n.t('orders.form.purchase_order_pay_type.po_number')}</label>
     <input
       type="password"
       name="order[po_number]"
