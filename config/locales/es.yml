@@ -52,6 +52,10 @@ es:
   orders:
     new:
       legend: "Por favor, introduzca sus datos"
+
+    create:
+      thanks: "Gracias por su pedido"
+
     form:
       name:            "Nombre"
       address_html:    "Direcci&oacute;n"
@@ -71,5 +75,3 @@ es:
         expiration_date: "Expiración"
       purchase_order_pay_type:
         po_number: "Número"
-
-  thanks: "Gracias por su pedido"

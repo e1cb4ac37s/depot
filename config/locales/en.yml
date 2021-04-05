@@ -31,6 +31,10 @@ en:
   orders:
     new:
       legend: "Please Enter Your Details"
+
+    create:
+      thanks: "Thank you for your order"
+
     form:
       name:            "Name"
       address_html:    "Address"
@@ -50,5 +54,3 @@ en:
         expiration_date: "Expiry"
       purchase_order_pay_type:
         po_number: "PO #"
-
-  thanks: "Thank you for your order"
